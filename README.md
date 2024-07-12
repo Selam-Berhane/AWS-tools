@@ -38,5 +38,8 @@ This script generates and stores IAM user credentials. Ensure you have appropria
 The Lambda function ARN for credential rotation is hardcoded. Make sure to replace it with your own Lambda function ARN.
 Access keys are stored in Secrets Manager. Ensure you have proper access controls on your Secrets Manager.
 
+Keep in mind that it is not generally recommended to store access/secrety key in AWS secretsmanager for securoty reasons ,
+instead you can use temporay tokens via AWS STS .
+
 ## Error Handling
 The script includes basic error handling for common AWS exceptions. Additional error handling may be required for production use.
